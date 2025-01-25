@@ -2,22 +2,16 @@ import pygame
 from pygame.locals import *
 
 def save_image(selected, displayAccessories):
-    # Create a transparent surface with the same size as the screen
-    output_surface = pygame.Surface((1000, 800), pygame.SRCALPHA)
+    output_surface = pygame.Surface((1200, 800), pygame.SRCALPHA)
     
-    # Draw the selected bubble
     if selected:
-        output_surface.blit(selected, (100, 200))
+        output_surface.blit(selected, (300, 200))
     
-    # Draw the accessories
     for accessory, pos in displayAccessories:
-        # Adjust the position to fit inside the saved image
-        adjusted_pos = (pos[0] - 560, pos[1] - 40)  # Offset based on rendering position
+        adjusted_pos = (pos[0] - 360, pos[1] - 40)
         output_surface.blit(accessory, adjusted_pos)
     
-    # Save as a PNG
     pygame.image.save(output_surface, "Assets/Characters/mainCharacter.png")
-    print("Image saved as output.png")
 
 def makeOver():
     pygame.init()
@@ -54,6 +48,10 @@ def makeOver():
     baguette = pygame.image.load("Assets/Accessories/baguette.webp")
     flower = pygame.image.load("Assets/Accessories/flower.png")
     noeud = pygame.image.load("Assets/Accessories/noeud.png")
+    eyelash = pygame.image.load("Assets/Accessories/eyelash.webp")
+    nailRight = pygame.image.load("Assets/Accessories/nailRight.webp")
+    nailLeft = pygame.image.load("Assets/Accessories/nailLeft.webp")
+
     bulles = [pygame.image.load("Assets/Accessories/bulle" + colors + ".webp") for colors in ["Jaune", "Rose", "Verte", "Grise", "Bleue"]]
     pinceEpiler = pygame.image.load("Assets/SkinIssue/Pince_a_épiler.png")
     comedon = pygame.image.load("Assets/SkinIssue/comedon.png")
@@ -67,6 +65,9 @@ def makeOver():
     baguette = pygame.transform.scale(baguette, (100, 50))
     flower = pygame.transform.scale(flower, (100, 50))
     noeud = pygame.transform.scale(noeud, (100, 50))
+    eyelash = pygame.transform.scale(eyelash, (100, 50))
+    nailRight = pygame.transform.scale(nailRight, (100, 50))
+    nailLeft = pygame.transform.scale(nailLeft, (100, 50))
     bulles = [pygame.transform.scale(color, (100, 100)) for color in bulles]
     pinceEpiler = pygame.transform.scale(pinceEpiler, (100, 50))
     comedon = pygame.transform.scale(comedon, (100, 100))
@@ -87,11 +88,14 @@ def makeOver():
         {"image": baguette, "pos": (1650, 340)},
         {"image": flower, "pos": (1800, 340)},
         {"image": noeud, "pos": (1650, 460)},
-        {"image": bulles[0], "pos": (1800, 460)},
-        {"image": bulles[1], "pos": (1650, 580)},
-        {"image": bulles[2], "pos": (1800, 580)},
-        {"image": bulles[3], "pos": (1650, 700)},
-        {"image": bulles[4], "pos": (1800, 700)}
+        {"image": eyelash, "pos": (1800, 460)},
+        {"image": nailRight, "pos": (1650, 580)},
+        {"image": nailLeft, "pos": (1800, 580)},
+        {"image": bulles[0], "pos": (1650, 700)},
+        {"image": bulles[1], "pos": (1800, 700)},
+        {"image": bulles[2], "pos": (1650, 820)},
+        {"image": bulles[3], "pos": (1800, 820)},
+        {"image": bulles[4], "pos": (1650, 940)}
     ]
 
     tools = [
@@ -148,6 +152,12 @@ def makeOver():
                             displayAccessories.append((pygame.transform.scale(accessory["image"], (700, 350)), (610, 450)))
                         elif accessory["image"] == baguette:
                             displayAccessories.append((pygame.transform.scale(accessory["image"], (400, 400)), (1110, 350)))
+                        elif accessory["image"] == nailRight:
+                            displayAccessories.append((pygame.transform.scale(accessory["image"], (400, 400)), (1110, 350)))
+                        elif accessory["image"] == nailLeft:
+                            displayAccessories.append((pygame.transform.scale(accessory["image"], (300, 300)), (450, 400)))
+                        elif accessory["image"] == eyelash:
+                            displayAccessories.append((pygame.transform.scale(accessory["image"], (600, 600)), (660, 240)))
                         else:
                             displayAccessories.append((pygame.transform.scale(accessory["image"], (600, 600)), (660, 40)))
                 for tool in tools:
