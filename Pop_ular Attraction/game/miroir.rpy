@@ -33,3 +33,5 @@ label miroir_scene:
     "Je vais être tellement audacieux, drôle, et magnétique que même ma mocheté sera séduisante."
 
     "Demain, je rentre dans l’arène. On verra bien si la prophétie de Carmen tient face à ma détermination..."
+
+    jump intro_personage
