@@ -76,4 +76,6 @@ label start:
     "Un silence s'installa. La bulle resta là, seule, à contempler l'idée de ne pas aller au bal. Peut-être que Cléa avait gagné cette fois."
     hide me
 
+    jump miroir_scene
+
     return
