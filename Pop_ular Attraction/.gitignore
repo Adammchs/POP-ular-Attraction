@@ -29,5 +29,6 @@ saves/
 *.rpyb
 *.rpyw
 *.rpyx
+*rpymc
 
 .DS_Store
