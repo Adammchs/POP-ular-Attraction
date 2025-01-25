@@ -1,9 +1,15 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define c = Character("Carmen", color="#c8ffce")
+define ca = Character("Carmen", color="#c8ffce")
+define l = Character("Luacs", color="#ffcc99")
+define k = Character("Khyle", color="#ffcc99")
+define cl = Character("Clément", color="#ffcc99")
+define s = Character("Sasuke", color="#ffcc99")
+define j = Character("Jean", color="#ffcc99")
+define t = Character("Titus", color="#ffcc99")
 
 default player_name = "Hendrik"
 define me = Character("[player_name]", color="#ffcc99")
@@ -25,15 +31,15 @@ label start:
     "Elle avançait discrètement, espérant atteindre le tableau des annonces sans croiser personne."
     "Mais, comme toujours, la vie était cruelle avec elle."
 
-    c "{size=+10}{b}Tiens donc, si ce n'est pas [player_name] La Nulle !{/size}{/b}"
+    ca "{size=+10}{b}Tiens donc, si ce n'est pas [player_name] La Nulle !{/size}{/b}"
 
     "[player_name] se figea immédiatement. Elle aurait voulu se dégonfler complètement, disparaître dans l'air."
     "Mais c'était impossible. Lentement, elle se retourna, ses contours frémissant sous la pression."
 
     show carmen normal at top
-    c "Alors, prête pour le grand bal de demain ?"
-    c "Oh, pardon, j'avais oublié... Avec ton look, tu n'as sûrement pas encore trouvé de cavalier."
-    c "J'ai raison, pas vrai ?"
+    ca "Alors, prête pour le grand bal de demain ?"
+    ca "Oh, pardon, j'avais oublié... Avec ton look, tu n'as sûrement pas encore trouvé de cavalier."
+    ca "J'ai raison, pas vrai ?"
     hide carmen
 
     show me normal at top
@@ -42,7 +48,7 @@ label start:
     hide me
 
     show carmen normal at top
-    c "\"Oh non, je suis juste trop moche et bizarre, personne ne veut aller au bal avec moi !\""
+    ca "\"Oh non, je suis juste trop moche et bizarre, personne ne veut aller au bal avec moi !\""
     hide carmen
 
     show crowd normal at top
@@ -55,10 +61,10 @@ label start:
     hide me
 
     show carmen normal at top
-    c "Pas encore demandé ?!"
-    c "Ma pauvre, il ne reste plus personne."
-    c "Les bulles comme toi ne vont pas au bal. Elles restent à la maison pour ne pas embarrasser les autres."
-    c "Tu devrais essayer, ça te ferait gagner du temps."
+    ca "Pas encore demandé ?!"
+    ca "Ma pauvre, il ne reste plus personne."
+    ca "Les bulles comme toi ne vont pas au bal. Elles restent à la maison pour ne pas embarrasser les autres."
+    ca "Tu devrais essayer, ça te ferait gagner du temps."
     "Les épines de Carmen scintillèrent sous la lumière du soleil, renforçant son air dominateur."
     hide carmen
 
@@ -75,7 +81,5 @@ label start:
     me "Pourquoi est-ce que je ne peux pas être... normale ?"
     "Un silence s'installa. La bulle resta là, seule, à contempler l'idée de ne pas aller au bal. Peut-être que Cléa avait gagné cette fois."
     hide me
-
-    jump miroir_scene
 
     return
