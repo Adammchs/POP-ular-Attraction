@@ -14,11 +14,15 @@ define t = Character("Titus", color="#ffcc99")
 default player_name = "Hendrik"
 define me = Character("[player_name]", color="#ffcc99")
 
+default khyleDancing = True
+
 
 
 # The game starts here.
 
 label start:
+
+    jump soccerField
 
     show bg playgrounds
 
