@@ -22,8 +22,6 @@ default khyleDancing = True
 
 label start:
 
-    jump soccerField
-
     show bg playgrounds
 
     $ player_name = renpy.input("Enter your name:")
@@ -41,9 +39,9 @@ label start:
     "Mais c'était impossible. Lentement, elle se retourna, ses contours frémissant sous la pression."
 
     show carmen normal at top
-    ca "Alors, prête pour le grand bal de demain ?"
+    ca "Alors, prête pour le grand bal de demain?"
     ca "Oh, pardon, j'avais oublié... Avec ton look, tu n'as sûrement pas encore trouvé de cavalier."
-    ca "J'ai raison, pas vrai ?"
+    ca "J'ai raison, pas vrai?"
     hide carmen
 
     show me normal at top
@@ -52,7 +50,7 @@ label start:
     hide me
 
     show carmen normal at top
-    ca "\"Oh non, je suis juste trop moche et bizarre, personne ne veut aller au bal avec moi !\""
+    ca "\"Oh non, je suis juste trop moche et bizarre, personne ne veut aller au bal avec moi!\""
     hide carmen
 
     show crowd normal at top
@@ -65,7 +63,7 @@ label start:
     hide me
 
     show carmen normal at top
-    ca "Pas encore demandé ?!"
+    ca "Pas encore demandé?!"
     ca "Ma pauvre, il ne reste plus personne."
     ca "Les bulles comme toi ne vont pas au bal. Elles restent à la maison pour ne pas embarrasser les autres."
     ca "Tu devrais essayer, ça te ferait gagner du temps."
@@ -81,8 +79,7 @@ label start:
     "Peut-être valait-il mieux rester chez elle demain soir, seule, plutôt que de risquer de devenir la risée de tout le monde."
     "Elle flotta jusqu'à un petit coin tranquille derrière les casiers, là où personne ne la trouverait."
     "Là, à l'abri des regards, elle laissa échapper un petit souffle de tristesse, une minuscule bulle dans la bulle."
-    # murmurant pour elle-même
-    me "Pourquoi est-ce que je ne peux pas être... normale ?"
+    me "{size=-10}Pourquoi est-ce que je ne peux pas être... normale?{/size}"
     "Un silence s'installa. La bulle resta là, seule, à contempler l'idée de ne pas aller au bal. Peut-être que Cléa avait gagné cette fois."
     hide me
 
