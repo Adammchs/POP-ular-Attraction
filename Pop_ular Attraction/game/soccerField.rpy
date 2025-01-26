@@ -4,12 +4,13 @@ default khyleAffection = 0
 
 label soccerField:
 
-    show bg soccerField
+    show bg soccerField with dissolve
 
     "Le terrain était en pleine effervescence."
     "Les Thunder Bulls, l'équipe de football star du lycée, s'entraînaient sous les projecteurs. Les cris des joueurs, le bruit des impacts et les applaudissements des spectateurs remplissaient l'air."
     "Non loin de là, sur une plateforme adjacente, une petite foule s'était rassemblée autour d'un espace dédié au Bull'air Dance."
-    "Au centre de cette scène flottait [player_name]. Ses contours étaient parfaitement ronds, légèrement iridescents, et elle se déplaçait avec une grâce aérienne qui attirait les regards. Personne ne reconnut [player_name], mais ses mouvements parlaient pour elle."
+    "Au centre de cette scène flottait [player_name]. Ses contours étaient parfaitement ronds, légèrement iridescents, et elle se déplaçait avec une grâce aérienne qui attirait les regards."
+    "Personne ne reconnut [player_name], mais ses mouvements parlaient pour elle."
     "Elle enchaînait des figures, virevoltant dans l'air, ses reflets captant la lumière des projecteurs. Chaque saut, chaque pirouette semblait défier la gravité, et le public retenait son souffle à chaque acrobatie."
 
     "{b}Sur le terrain, Khyle,{/b} la star des Thunder Bulls, était en pleine démonstration de force, mais il remarqua que quelque chose détournait l'attention. Des joueurs pointaient vers la plateforme du Bull'air Dance."
