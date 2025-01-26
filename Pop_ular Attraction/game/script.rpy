@@ -10,6 +10,7 @@ define cl = Character("Clément", color="#ffcc99")
 define s = Character("Sasuke", color="#ffcc99")
 define j = Character("Jean", color="#ffcc99")
 define t = Character("Titus", color="#ffcc99")
+define ph = Character("Professeur H.", color="#ffcc99")
 
 default player_name = "Hendrik"
 define me = Character("[player_name]", color="#ffcc99")
