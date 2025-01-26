@@ -3,7 +3,7 @@ init python:
 
 label makeOverScene:
 
-    # python:
-        # selectedList, accessoryList, colorBubble = MakeOver.makeOver()
+    python:
+        selectedList, accessoryList, colorBubble = MakeOver.makeOver()
 
     jump intro_personage

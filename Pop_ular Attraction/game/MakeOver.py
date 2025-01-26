@@ -34,7 +34,7 @@ def save_image(selected, displayAccessories):
     for accessory, pos in displayAccessories:
         adjusted_pos = (pos[0] - 360, pos[1] - 40)
         output_surface.blit(accessory, adjusted_pos)
-    pygame.image.save(output_surface, "Assets/Characters/mainCharacter.png")
+    pygame.image.save(output_surface, "Pop_ular Attraction/game/images/me normal.png")
 
 def generate_random_point_in_circle(center_x, center_y, radius):
     angle = random.uniform(0, 2 * math.pi)
@@ -45,7 +45,7 @@ def generate_random_point_in_circle(center_x, center_y, radius):
 
 def ball(selectedAccessories, displayAccessories, selected):
     pygame.init()
-    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    screen = pygame.display.set_mode((1920, 1080))
     clock = pygame.time.Clock()
     time = 0
     running = True
@@ -172,7 +172,7 @@ def ball(selectedAccessories, displayAccessories, selected):
 
 def makeOver():
     pygame.init()
-    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    screen = pygame.display.set_mode((1920, 1080))
     clock = pygame.time.Clock()
     time = 0
     running = True
@@ -372,8 +372,10 @@ def makeOver():
         screen.blit(menuButton, menuButton_rect.topleft)
         screen.blit(selected, (660, 240))
         screen.blit(saveButton, saveButton_rect.topleft)
-        screen.blit(dirt, (660, 240))
-        screen.blit(cleaningEffect, (660, 240))
+        if dirty_op != 0:
+            screen.blit(dirt, (660, 240))
+        if cleaning_op != 0:
+            screen.blit(cleaningEffect, (660, 240))
         for pimple in pimples:
             if not pimple[1]:
                 screen.blit(acne, pimple[0])
