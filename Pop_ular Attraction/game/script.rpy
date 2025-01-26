@@ -31,8 +31,6 @@ image bg playgroundsBench = "images/bg playgroundsBench.jpg"
 
 label start:
 
-    jump informatiqueClass
-
     show bg playgrounds with dissolve
 
     $ player_name = renpy.input("Enter your name:")
