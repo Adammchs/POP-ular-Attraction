@@ -19,7 +19,7 @@ label sasuke_roof
             jump choice3_dont_understand
 
 label choice1_first_time
-    $ sasukeDancing = false
+    $ sasukeDancing = False
     me "C'est l'une des premières fois que je te vois, tu fais quoi d'habitude ?"
     s "Rien de spécial, je laisse mes pensées vagabonder dans l'immensité du monde"
     me "Waw, super."
@@ -29,14 +29,14 @@ label choice1_first_time
     me "Étrange comme conversation"
 
 label choice2_beautiful
-    $ sasukeDancing = true
+    $ sasukeDancing = True
     me "Waw, c'est magnifique ce que tu viens de dire là"
     s "Vraiment ? Merci, tu es la première personne à me dire ça."
     s " Tu es... Spécial."
     "*Part"
 
 label choice3_dont_understand
-    $ sasukeDancing = false
+    $ sasukeDancing = False
     me "Je ne comprend pas ce que tu viens de dire"
     s "De toute façon, personne ne me comprend"
     "*Il se rapproche du vide*"
