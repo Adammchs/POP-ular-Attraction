@@ -1,6 +1,7 @@
 import pygame
 import random
 import math
+import sys
 from pygame.locals import *
 
 beret = pygame.image.load("Assets/Accessories/beret.png")
@@ -393,3 +394,5 @@ def makeOver():
     pygame.quit()
     return selectedAccessories, displayAccessories, selected
 
+if len(sys.argv) == 0:
+    makeOver()

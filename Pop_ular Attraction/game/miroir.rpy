@@ -34,4 +34,4 @@ label miroir_scene:
 
     "Demain, je rentre dans l’arène. On verra bien si la prophétie de Carmen tient face à ma détermination..."
 
-    jump makeOverScene
+    jump intro_personage
