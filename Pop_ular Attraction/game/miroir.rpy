@@ -2,7 +2,7 @@ label miroir_scene:
 
     scene bg miroir
 
-    show me normal at top
+    show me uggly at top
 
     "Bon… Carmen a parlé."
 
@@ -34,4 +34,4 @@ label miroir_scene:
 
     "Demain, je rentre dans l’arène. On verra bien si la prophétie de Carmen tient face à ma détermination..."
 
-    jump intro_personage
+    jump makeOverScene

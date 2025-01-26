@@ -29,7 +29,7 @@ label canteen:
     "Elle le regarde un instant, un petit sourire en coin apparaissant sur ses contours. Elle reconnaît bien Jean, mais elle préfère d'abord tester ses nouvelles frontières."
     "Elle se souvient de tous les regards détournés qu'il lui avait lancés dans le passé. Aujourd'hui, elle veut lui montrer qu'elle est plus que ce qu'il pensait."
 
-    show me normal at top
+    show me normal
     me "Non, je suis... la même personne, mais avec un peu de changement."
     hide me
 

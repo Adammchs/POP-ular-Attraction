@@ -25,6 +25,9 @@ label invitation_scene:
         "Titus le complotiste" if titusDancing:
             jump choice_titus
 
+        "Personne":
+            jump choice_personne
+
     return
 
 # Labels des choix individuels
@@ -46,6 +49,10 @@ label choice_sasuke:
 
 label choice_titus:
     t "Merci de m'avoir choisi <3"
+    jump choice1_done
+
+label choice_personne:
+    t "Bon... Personne ne m'as inviter, c'est pas grave, je vais me preparer et leur faire regreter !"
     jump choice1_done
 
 # Label final après un choix

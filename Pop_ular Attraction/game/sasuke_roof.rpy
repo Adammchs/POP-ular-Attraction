@@ -1,4 +1,4 @@
-label sasuke_roof
+label sasuke_roof:
     scene bg high_school_roof
 
     show me normal at left
@@ -18,7 +18,7 @@ label sasuke_roof
         "Je ne comprend pas ce que tu viens de dire":
             jump choice3_dont_understand
 
-label choice1_first_time
+label choice1_first_time:
     $ sasukeDancing = False
     me "C'est l'une des premières fois que je te vois, tu fais quoi d'habitude ?"
     s "Rien de spécial, je laisse mes pensées vagabonder dans l'immensité du monde"
@@ -28,14 +28,18 @@ label choice1_first_time
     "*Sasuke part"
     me "Étrange comme conversation"
 
-label choice2_beautiful
+    jump invitation_scene
+
+label choice2_beautiful:
     $ sasukeDancing = True
     me "Waw, c'est magnifique ce que tu viens de dire là"
     s "Vraiment ? Merci, tu es la première personne à me dire ça."
     s " Tu es... Spécial."
     "*Part"
 
-label choice3_dont_understand
+    jump invitation_scene
+
+label choice3_dont_understand:
     $ sasukeDancing = False
     me "Je ne comprend pas ce que tu viens de dire"
     s "De toute façon, personne ne me comprend"
@@ -47,3 +51,5 @@ label choice3_dont_understand
     me "oooooooooooooooooooo..."
     me "oooooooooooooooooooooon"
     me "Bon, moi, je vais draguer quelqu'un d'autre"
+
+    jump invitation_scene

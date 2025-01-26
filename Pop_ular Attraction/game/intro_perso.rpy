@@ -37,3 +37,5 @@ label intro_personage:
     s "mmmmmmmmmh"
     s "Elle est nouvelle."
     hide sasuke
+
+    jump informatiqueClass
