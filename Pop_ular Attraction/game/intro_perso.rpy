@@ -1,11 +1,3 @@
-# define cl = Character("Clément")
-# define ca = Character("Carmen")
-# define t = Character("Titus")
-# define j = Character("Jean")
-# define k = Character("Khyle")
-# define s = Character("Sasuke")
-# define l = Character("Lucas")
-
 label intro_personage:
     scene bg playgrounds
 
