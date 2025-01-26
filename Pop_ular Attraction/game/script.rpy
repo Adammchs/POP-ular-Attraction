@@ -15,6 +15,7 @@ default player_name = "Hendrik"
 define me = Character("[player_name]", color="#ffcc99")
 
 default khyleDancing = True
+default jeanDancing = True
 
 
 
@@ -22,7 +23,7 @@ default khyleDancing = True
 
 label start:
 
-    show bg playgrounds
+    show bg playgrounds with dissolve
 
     $ player_name = renpy.input("Enter your name:")
     $ player_name = player_name.strip()
@@ -57,7 +58,7 @@ label start:
     "Les bulles du lycée autour éclatèrent de rire."
     hide crowd
 
-    show me blush at top
+    show me normal at top
     "La bulle baissa son regard, fixant le sol en espérant qu'il l'engloutirait."
     me "Je... Je n'ai pas encore demandé..."
     hide me
@@ -70,7 +71,7 @@ label start:
     "Les épines de Carmen scintillèrent sous la lumière du soleil, renforçant son air dominateur."
     hide carmen
 
-    show me blush at top
+    show me normal at top
     "[player_name] ne répondit pas. Ses contours se contractèrent un instant, comme si elle allait éclater de tristesse."
     "Mais au lieu de ça, elle fit demi-tour, flottant péniblement dans l'air."
     "Dans sa tête, les mots de Carmen résonnaient en boucle, comme un écho cruel."
