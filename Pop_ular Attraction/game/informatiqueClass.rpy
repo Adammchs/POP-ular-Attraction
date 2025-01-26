@@ -18,13 +18,13 @@ label informatiqueClass:
     "La bulle ouvrit son cahier et commença à se concentrer, naviguant dans le logiciel avec une aisance qu'elle n'avait pas il y a encore quelques semaines."
     "Au bout de quelques minutes, Clément releva brièvement la tête en entendant les touches de son clavier. Il fronça les sourcils en jetant un coup d'œil discret vers elle."
 
-    show clement normal
+    show clement normal at top
     cl "{size=-10}Huh... Une nouvelle?{/size}"
     hide clement
 
     "Il hésita un instant, puis tourna légèrement son fauteuil vers elle."
 
-    show clement normal
+    show clement normal at top
     cl "Hé... Excuse-moi, mais t'es dans cette classe depuis quand? Je t'ai jamais vue ici avant."
     hide clement
 
@@ -34,7 +34,7 @@ label informatiqueClass:
 
     "Clément plissa les yeux, intrigué. Il la détailla un moment, puis écarquilla soudainement les yeux en la reconnaissant."
 
-    show clement normal
+    show clement normal at top
     cl "Attends... Tu... Tu es [player_name]?! Genre... la même bulle qu'avant?"
     hide clement
 
@@ -44,7 +44,7 @@ label informatiqueClass:
 
     "Clément se passa une main dans les cheveux, visiblement troublé."
 
-    show clement normal
+    show clement normal at top
     cl "Bah… ouais! C'est que... T'as changé, quoi. Genre… vraiment changé. Je t'aurais jamais reconnue."
     hide clement
 
@@ -54,7 +54,7 @@ label informatiqueClass:
 
     "Clément rougit légèrement, évitant son regard."
 
-    show clement normal
+    show clement normal at top
     cl "Oui... enfin, je veux dire... euh... oui, bien sûr! Bref. Bon, t'as besoin d'un coup de main avec le projet?"
     hide clement
 
@@ -64,7 +64,7 @@ label informatiqueClass:
 
     "Clément écarquilla les yeux, comme si elle avait touché un point sensible."
 
-    show clement normal
+    show clement normal at top
     cl "Attends, c'est pas une mauvaise idée, ça! Imagine une application pour simuler les stratégies du Bataillon d'Exploration… avec des cartes des Murs, des plans d'évasion! Ce serait génial, non?"
     hide clement
 
@@ -74,7 +74,7 @@ label informatiqueClass:
     me "Et tu l'appellerais comment? \"Shingeki Simulator\"?"
     hide me
 
-    show clement normal
+    show clement normal at top
     cl "Oui! Et avec une option pour analyser les déplacements des Titans, un mode survie, et pourquoi pas… la possibilité d'incarner Levi! Attends, je vais noter ça quelque part..."
     hide clement
 
@@ -84,7 +84,7 @@ label informatiqueClass:
 
     "Clément releva la tête, visiblement agacé d'être interrompu dans son élan créatif. Il murmura en direction de [player_name]."
 
-    show clement normal
+    show clement normal at top
     cl "{size=-10}T'as vu? Ils comprennent rien au potentiel de mes idées... Mais toi, au moins, t'as l'air cool. Je sens qu'on va bien s'entendre."
     hide clement
 
@@ -98,7 +98,7 @@ label informatiqueClass:
     "Une sonnerie retentit, annonçant la fin du cours. Les élèves commencèrent à ranger leurs affaires, Clément rangeant son carnet avec soin."
     "Il se retourna vers [player_name] timidement."
 
-    show clement normal
+    show clement normal at top
     cl "Euh... Je voulais te demander quelque chose."
     hide clement
 
@@ -108,22 +108,22 @@ label informatiqueClass:
 
     "Clément hésita un instant, puis se lança."
 
-    show clement normal
+    show clement normal at top
     cl "Sérieusement, t'es vraiment impressionnante maintenant... C'est comme si tu étais une toute autre personne. Comment t'as fait? C'est quoi ton secret?"
     hide clement
 
     menu:
         "J'ai juste pris confiance en moi. Je me suis dit qu'il était temps de montrer qui je suis vraiment":
             $ clementAffection += 1
-            show clement normal
+            show clement normal at top
             cl "Ha ! Le sérum du Titan… Pas mal, pas mal. Mais sérieusement, c'est cool de voir que t'as gagné en confiance. Ça te va bien."
         "J'ai trouvé le sérum du Titan Colossal, ça aide pas mal.":
             $ clementAffection += 2
-            show clement normal
+            show clement normal at top
             cl "Ha ! Le sérum du Titan… Pas mal, pas mal. Mais sérieusement, c'est cool de voir que t'as gagné en confiance. Ça te va bien."
         "Ça te regarde pas, Clément.":
             $ clementAffection -= 1
-            show clement normal
+            show clement normal at top
             cl "Oh... OK, désolé. Je voulais pas te déranger."
 
 
@@ -133,15 +133,15 @@ label informatiqueClass:
     menu:
         "Qui sait? Peut-être que je prépare une application pour éradiquer les Titans... ou te recruter dans mon équipe.":
             $ clementAffection += 1
-            show clement normal
+            show clement normal at top
             cl "Oui, c'est ça! T'imagines, un simulateur où tu peux recréer les batailles? Ça serait trop bien. Tu pourrais même jouer un Titan avec un mode survie."
         "Je suis juste concentrée sur ce que demande le prof, pas comme toi avec tes délires sur SNK.":
             $ clementAffection -= 1
-            show clement normal
+            show clement normal at top
             cl "Ah... Ouais, t'as raison, faut rester sérieux. Désolé si je t'embête avec mes délires."
         "Franchement, une appli pour les stratégies du Bataillon serait une idée géniale. Tu devrais y réfléchir sérieusement.":
             $ clementAffection += 2
-            show clement normal
+            show clement normal at top
             cl "Oui, c'est ça! T'imagines, un simulateur où tu peux recréer les batailles? Ça serait trop bien. Tu pourrais même jouer un Titan avec un mode survie."
 
     cl "Tu sais, je dis ça, mais tu m'impressionnes. D'habitude, personne ne me parle autant de mes passions. Toi, t'es différente."
@@ -150,17 +150,17 @@ label informatiqueClass:
     menu:
         "Merci, Clément. Ça me fait plaisir. Et puis, tes passions, elles sont cool. Ça te rend unique.":
             $ clementAffection += 2
-            show clement normal
+            show clement normal at top
             cl "C'est vrai? Merci... T'es sympa, toi. Franchement, je suis content qu'on ait discuté aujourd'hui."
             hide clement
         "Oh, arrête, tu vas me faire rougir! Enfin, si c'est possible pour une bulle.":
             $ clementAffection += 1
-            show clement normal
+            show clement normal at top
             cl "C'est vrai? Merci... T'es sympa, toi. Franchement, je suis content qu'on ait discuté aujourd'hui."
             hide clement
         "Oui, oui... Bon, je dois me concentrer sur mon projet.":
             $ clementAffection -= 1
-            show clement normal
+            show clement normal at top
             cl "Oh... OK. Désolé, je te laisse bosser alors."
             hide clement
 
@@ -177,18 +177,20 @@ label maxClementAffection:
     "Il se leva, ramassant ses affaires avec soin."
     "Il se mit à rougir et hésita un instant, puis se lança."
 
-    show clement normal
+    show clement normal at top
     cl "Écoute, [player_name], je sais qu'on se connaît à peine, mais... Est-ce que tu voudrais bien... venir au bal avec moi?"
     hide clement
 
     "[player_name] resta bouche bée, surprise par sa demande. Elle hésita un instant."
 
-    show clement normal
+    show clement normal at top
     cl "Tu n'es pas obligée de répondre tout de suite, hein. Prends ton temps. On se verra au bal, de toute façon."
     hide clement
 
     "Clément lui adressa un sourire timide, puis sortit de la salle."
     "Laissant [player_name] seule, perdue dans ses pensées."
+
+    jump afterInfo
 
 label minusClementAffection:
 
@@ -198,12 +200,18 @@ label minusClementAffection:
     "Il jeta un dernier regard à [player_name], puis sortit de la salle sans un mot."
     "Laissant [player_name] seule, le cœur lourd."
 
+    jump afterInfo
+
 label endClementAffection:
 
     "Clément se leva, ramassant ses affaires avec soin tout en discutant avec [player_name]."
 
-    show clement normal
+    show clement normal at top
     cl "Bon, je vais y aller. À demain, peut-être?"
     hide clement
 
-    "La bulle hocha la tête, un sourire aux lèvres, puis retourna à son projet, le cœur léger."
+    "[player_name] hocha la tête, un sourire aux lèvres, puis retourna à son projet, le cœur léger."
+
+
+label afterInfo:
+    jump historyClass

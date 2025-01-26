@@ -125,14 +125,14 @@ label maxAffectionSoccerField:
     "Khyle, après avoir fait sa demande, se détourne, laissant [player_name] seule sur la plateforme. Elle reste là, les contours frémissants, le cœur battant."
     "Elle n'a jamais été au bal, jamais eu de cavalier. Mais Khyle... il n'est pas comme les autres. Peut-être que ce bal pourrait être le début de quelque chose de nouveau."
 
-    return # A changer
+    jump invitation_scene
 
 label minusAffectionSoccerField:
 
     "En ressentant la froideur de [player_name], Khyle se renfrogne et se détourne. Laissant [player_name] seule sur la plateforme, il s'éloigne sans un mot."
     $ khyleDancing = False
 
-    return # A changer
+    jump invitation_scene
 
 label endOfTheField:
 
@@ -141,4 +141,4 @@ label endOfTheField:
     k "Si on se retrouve au bal, ne m'évite pas, ok? J'ai... j'ai envie de te connaître un peu plus."
     hide khyle
 
-    return # A changer
+    jump invitation_scene

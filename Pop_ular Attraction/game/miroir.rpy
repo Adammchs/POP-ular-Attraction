@@ -2,7 +2,7 @@ label miroir_scene:
 
     scene bg miroir
 
-    show me normal at top
+    show me uggly at top
 
     "Bon… Carmen a parlé."
 
