@@ -16,6 +16,9 @@ define me = Character("[player_name]", color="#ffcc99")
 
 default khyleDancing = True
 default jeanDancing = True
+default titusDancing = True
+default sasukeDancing = True
+default clementDancing = True
 
 image bg playgrounds = "images/bg playgrounds.jpg"
 image bg playgroundsBench = "images/bg playgroundsBench.jpg"
@@ -109,6 +112,7 @@ label afterLunch:
             me "{i}Je ne peux pas me défiler.{/i}"
             me "{i}Je vais y aller, et je vais montrer à tout le monde que je suis forte.{/i}"
             hide me
+            $ sasukeDancing = False
             jump soccerField
 
         "Je vais sécher.":
@@ -116,5 +120,7 @@ label afterLunch:
             me "{i}Je ne peux pas...{i}"
             me "{i}Je ne peux pas affronter ça.{/i}"
             hide me
+
+            $ khyleDancing = False
 
             return # A changer

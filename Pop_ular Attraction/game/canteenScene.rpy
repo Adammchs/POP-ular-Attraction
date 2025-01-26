@@ -118,6 +118,80 @@ label canteen:
             hide jean
             "Jean montre une forme de soutien discret, mais sincère. Il semble prêt à aider la bulle si elle en a besoin."
 
+    "Jean et [player_name] entendent un petit bruit de bulle qui éclate, puis se tourna tous les deux vers la source du son."
+    "Éclatant tous sur son passage, Carmen se dirigea à la table de Jean et [player_name]."
+
+    show carmen normal at top
+    ca "Tu essaies encore d'aguicher un garçon, [player_name]? Tu ne comprends pas que tu n'as aucune chance?"
+    hide carmen
+
+    show me normal at top
+    me "Je... je ne vois pas de quoi tu parles, Carmen. Je suis juste en train de discuter avec Jean."
+    hide me
+
+    show carmen normal at top
+    ca "Discuter? Tu crois vraiment que tu as quelque chose à dire qui l'intéresse? Tu es tellement pathétique, [player_name]."
+    hide carmen
+
+    show jean normal at top
+    j "Carmen, laisse-la tranquille. On discutait juste, c'est tout."
+    hide jean
+
+    show carmen normal at top
+    ca "Oh, je vois. Tu as trouvé un nouveau pigeon pour te soutenir, c'est ça?"
+    ca "Tu es vraiment pitoyable, [player_name]. Tu ne comprends pas que tu n'es rien, que tu ne seras jamais rien?"
+    hide carmen
+
+    show jean normal at top
+    j "Carmen, c'est bon. Laisse-la tranquille. Elle n'a rien fait de mal."
+    j "Et puis, tu n'as pas à lui parler comme ça. Elle est une personne comme les autres, tu sais."
+    hide jean
+
+    show carmen normal at top
+    ca "Oh, vraiment? Tu crois qu'elle mérite d'être traitée comme une personne normale? Tu es vraiment naïf, Jean."
+    ca "Tu ne vois pas qu'elle n'est qu'une bulle, une bulle insignifiante qui ne mérite pas d'être ici?"
+    hide carmen
+
+    show me normal at top
+    me "Carmen, je... je ne sais pas pourquoi tu es si méchante avec moi. Je ne t'ai rien fait."
+    hide me
+
+    show carmen normal at top
+    ca "Rien fait? Tu es là, à essayer de te faire passer pour quelqu'un d'autre, à essayer de te faire remarquer."
+    hide carmen
+
+    show me normal at top
+    me "J'en ai marre de tes mensonges, Carmen. Je ne suis pas celle que tu crois."
+    me "Et puis, tu n'as pas a me juger comme ça. Tu ne sais rien de moi."
+    me "Tu es juste jalouse parce que je suis en train de changer, et toi, tu restes la même."
+    me "Un cactus sans épine, c'est ce que tu es. Tu piques tout le monde, mais tu ne supportes pas qu'on te renvoie la pareille."
+    hide me
+
+    show carmen normal at top
+    ca "Jalouse? Moi, jalouse de toi? Tu te fiche de moi, [player_name]."
+    ca "J'en ai assez entendu comme ça. tu m'as coupé l'appétit, et je ne veux plus te voir."
+    hide carmen
+
+    "Carmen se tourna brusquement et partit, laissant [player_name] et Jean seuls à la table."
+
+    show jean normal at top
+    j "Tu sais, [player_name], je... je ne sais pas trop quoi dire. Mais je suis désolé pour ce qu'il s'est passé."
+    j "Tu ne mérites pas d'être traitée comme ça. Tu es une personne, et tu as le droit d'être respectée."
+    hide jean
+
+    show me normal at top
+    me "Merci, Jean. C'est gentil de ta part. Je ne sais pas pourquoi elle est comme ça avec moi."
+    hide me
+
+    show jean normal at top
+    j "Elle a ses problèmes, c'est sûr. Mais ça ne justifie pas son comportement envers toi."
+    j "Tu sais, si jamais tu as besoin de parler, je suis là. Je veux dire, je ne suis pas un expert, mais je peux écouter."
+    hide jean
+
+    show me normal at top
+    me "Merci Jean."
+    hide me
+
     if jeanAffection == 4:
         jump maxJeanAffection
     elif jeanAffection == -1:
