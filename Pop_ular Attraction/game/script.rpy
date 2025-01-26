@@ -65,7 +65,6 @@ label start:
 
 
     show bg playgrounds with dissolve
-    show titus normal at top
 
     $ player_name = renpy.input("Enter your name:")
     $ player_name = player_name.strip()
