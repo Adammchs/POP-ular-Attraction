@@ -5,7 +5,7 @@ label sasuke_roof:
     me "Hey, mais que fait tu là toi tu sèches aussi ?"
 
     "???" "La lumière du savoir ne m'atteint plus. Aujourd'hui, je me perds dans les ombres, là où les cours ne peuvent me suivre. Bonjour."
-    show s normal at right
+    show sasuke normal at right
 
     me "Ah, que fais-tu ?"
     s "Les jours qui passent sont comme des ombres qui s'étirent dans le silence. Ils ne laissent derrière eux que des fragments de ce que nous étions, tandis que l'avenir s'efface sous le poids de nos choix."
