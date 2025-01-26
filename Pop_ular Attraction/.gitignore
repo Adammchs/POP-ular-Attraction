@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ren'Py build files
+build/
+renpy/common/
+
+# Ren'Py log files
+log.txt
+errors.txt
+
+# Ren'Py persistent data
+*.persistent
+
+# Ren'Py save files
+saves/
+*.save
+
+# Ren'Py backup files
+*.bak
+*.old
+
+# Other files to ignore
+*.rpyc
+*.rpa
+*.rpyb
+*.rpyw
+*.rpyx
