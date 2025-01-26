@@ -17,6 +17,9 @@ define me = Character("[player_name]", color="#ffcc99")
 default khyleDancing = True
 default jeanDancing = True
 
+image bg playgrounds = "images/bg playgrounds.jpg"
+image bg playgroundsBench = "images/bg playgroundsBench.jpg"
+
 
 
 # The game starts here.
@@ -87,3 +90,31 @@ label start:
     jump miroir_scene
 
     return
+
+label afterLunch:
+
+    show bg playgroundsBench with dissolve
+
+    "Après le déjeuner, [player_name] se retrouva seule dans la cour de récréation."
+    "Elle s'assit sur un banc, les contours frémissants, le cœur battant."
+    "Elle se rendit compte qu'elle avait cours de sport l'après-midi."
+    show me normal at top
+    me "{i}Si je vais en cours, je vais devoir affronter les bulles.{/i}"
+    me "{i}Mais surtout... je vais devoir affronter Khyle.{/i}"
+    hide me
+
+    menu:
+        "Je vais en cours!":
+            show me normal at top
+            me "{i}Je ne peux pas me défiler.{/i}"
+            me "{i}Je vais y aller, et je vais montrer à tout le monde que je suis forte.{/i}"
+            hide me
+            jump soccerField
+
+        "Je vais sécher.":
+            show me normal at top
+            me "{i}Je ne peux pas...{i}"
+            me "{i}Je ne peux pas affronter ça.{/i}"
+            hide me
+
+            return # A changer

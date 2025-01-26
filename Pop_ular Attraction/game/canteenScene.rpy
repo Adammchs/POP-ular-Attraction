@@ -156,7 +156,7 @@ label maxJeanAffection:
     "Jean se leva de sa chaise, un peu gêné par sa propre audace. Il ne savait pas trop comment réagir"
     "Il se tourna et partit, laissant [player_name] seule à la table, le cœur battant la chamade."
 
-    return # A changer
+    jump afterLunch
 
 label minusJeanAffection:
 
@@ -171,7 +171,7 @@ label minusJeanAffection:
 
     $ jeanDancing = False
 
-    return # A changer
+    jump afterLunch
 
 label endJeanAffection:
 
@@ -192,4 +192,4 @@ label endJeanAffection:
     "Jean se leva de sa chaise, un sourire timide aux lèvres. Il semblait un peu plus détendu, un peu plus ouvert à la possibilité de lier une amitié avec [player_name]."
     "Il partit, laissant [player_name] seule à la table, pensant à ce leurs conversations futures avec une pointe d'excitation."
 
-    return # A changer
+    jump afterLunch
