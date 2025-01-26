@@ -4,13 +4,14 @@
 # name of the character.
 
 define ca = Character("Carmen", color="#c8ffce")
-define l = Character("Luacs", color="#ffcc99")
+define l = Character("Lucas", color="#ffcc99")
 define k = Character("Khyle", color="#ffcc99")
 define cl = Character("Clément", color="#ffcc99")
 define s = Character("Sasuke", color="#ffcc99")
 define j = Character("Jean", color="#ffcc99")
 define t = Character("Titus", color="#ffcc99")
 define ph = Character("Professeur H.", color="#ffcc99")
+define pi = Character("Professeur I.", color="#ffcc99")
 
 default player_name = "Hendrik"
 define me = Character("[player_name]", color="#ffcc99")
@@ -29,6 +30,8 @@ image bg playgroundsBench = "images/bg playgroundsBench.jpg"
 # The game starts here.
 
 label start:
+
+    jump informatiqueClass
 
     show bg playgrounds with dissolve
 
