@@ -1,25 +1,34 @@
 import pygame
+import random
+import math
 from pygame.locals import *
 
 def save_image(selected, displayAccessories):
     output_surface = pygame.Surface((1200, 800), pygame.SRCALPHA)
-    
     if selected:
         output_surface.blit(selected, (300, 200))
-    
     for accessory, pos in displayAccessories:
         adjusted_pos = (pos[0] - 360, pos[1] - 40)
         output_surface.blit(accessory, adjusted_pos)
-    
     pygame.image.save(output_surface, "Assets/Characters/mainCharacter.png")
+
+def generate_random_point_in_circle(center_x, center_y, radius):
+    angle = random.uniform(0, 2 * math.pi)
+    distance = math.sqrt(random.uniform(0, 1)) * radius
+    x = center_x + distance * math.cos(angle)
+    y = center_y + distance * math.sin(angle)
+    return x, y
 
 def makeOver():
     pygame.init()
     screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
     clock = pygame.time.Clock()
+    time = 0
     running = True
     xpE = 0
     ypE = 0
+    dirty_op = 255
+    cleaning_op = 0
 
     background = pygame.image.load("Assets/Background/room.jpg")
     background = pygame.transform.scale(background, screen.get_size())
@@ -30,16 +39,13 @@ def makeOver():
     closeButton_rect = closeButton.get_rect(topleft=(1850, 40))
     pygame.draw.line(closeButton, (255, 255, 255), (0, 0), (20, 20), 3)
     pygame.draw.line(closeButton, (255, 255, 255), (0, 20), (20, 0), 3)
-    saveButton = pygame.Surface((100, 50), pygame.SRCALPHA)
+    saveButton = pygame.image.load("Assets/Background/save.webp")
+    saveButton = pygame.transform.scale(saveButton, (200, 100))
     saveButton_rect = saveButton.get_rect(topleft=(40, 120))
-    pygame.draw.rect(saveButton, (0, 0, 255), (0, 0, 100, 50))
-    font = pygame.font.Font(None, 24)
-    text = font.render("Save", True, (255, 255, 255))
-    saveButton.blit(text, (10, 10))
 
-    menuButton = pygame.Surface((50, 50), pygame.SRCALPHA)
+    menuButton = pygame.image.load("Assets/Background/menu.webp")
+    menuButton = pygame.transform.scale(menuButton, (50, 50))
     menuButton_rect = menuButton.get_rect(topleft=(40, 40))
-    pygame.draw.rect(menuButton, (0, 255, 0), (0, 0, 50, 50))
 
     beret = pygame.image.load("Assets/Accessories/beret.png")
     lunettes = pygame.image.load("Assets/Accessories/lunettes.webp")
@@ -53,10 +59,17 @@ def makeOver():
     nailLeft = pygame.image.load("Assets/Accessories/nailLeft.webp")
 
     bulles = [pygame.image.load("Assets/Accessories/bulle" + colors + ".webp") for colors in ["Jaune", "Rose", "Verte", "Grise", "Bleue"]]
+    
     pinceEpiler = pygame.image.load("Assets/SkinIssue/Pince_a_épiler.png")
     comedon = pygame.image.load("Assets/SkinIssue/comedon.png")
     savon = pygame.image.load("Assets/SkinIssue/savon.png")
     shower = pygame.image.load("Assets/SkinIssue/shower.png")
+
+    acne = pygame.image.load("Assets/SkinIssue/acne.png")
+    acneperced = pygame.image.load("Assets/SkinIssue/acnepercé.png")
+    dirt = pygame.image.load("Assets/SkinIssue/dirt.png")
+    bodyHair = pygame.image.load("Assets/SkinIssue/poil.png")
+    cleaningEffect = pygame.image.load("Assets/SkinIssue/effetsavon.png")
 
     beret = pygame.transform.scale(beret, (100, 50))
     lunettes = pygame.transform.scale(lunettes, (100, 50))
@@ -69,10 +82,20 @@ def makeOver():
     nailRight = pygame.transform.scale(nailRight, (100, 50))
     nailLeft = pygame.transform.scale(nailLeft, (100, 50))
     bulles = [pygame.transform.scale(color, (100, 100)) for color in bulles]
+
     pinceEpiler = pygame.transform.scale(pinceEpiler, (100, 50))
     comedon = pygame.transform.scale(comedon, (100, 100))
     savon = pygame.transform.scale(savon, (100, 100))
     shower = pygame.transform.scale(shower, (100, 100))
+
+    acne = pygame.transform.scale(acne, (100, 100))
+    acneperced = pygame.transform.scale (acneperced, (100, 100))
+    dirt = pygame.transform.scale (dirt, (600, 600))
+    bodyHair = pygame.transform.scale(bodyHair, (50, 100))
+    cleaningEffect = pygame.transform.scale(cleaningEffect, (600, 600))
+
+    dirt.set_alpha(dirty_op)
+    cleaningEffect.set_alpha(cleaning_op)
 
     selected = bulles[3]
     selected = pygame.transform.scale(selected, (600, 600))
@@ -105,11 +128,26 @@ def makeOver():
         {"outil": shower, "pos": (1300, 620)}
     ]
 
+    skinIssues = [
+        {"skin": acne, "pos": (1200, 500)},
+        {"skin": acneperced, "pos": (1200, 520)},
+        {"skin": bodyHair, "pos": (1200, 500)}
+    ]
+
     menu_visible = False
     menu_x = 2000
     menu_speed = 20
 
+    pimples = []
+    for i in range(5):
+        pimples.append([generate_random_point_in_circle(960, 540, 250), False])
+    
+    hairs = []
+    for i in range(5):
+        hairs.append([generate_random_point_in_circle(960, 540, 250), random.randint(0, 360)])
+
     while running:
+        time += clock.get_time()
         for event in pygame.event.get():
             if event.type == QUIT:
                 running = False
@@ -121,10 +159,10 @@ def makeOver():
                     running = False
                     break
         
-                if menuButton_rect.collidepoint(pos):
+                if hairs == [] and pimples == [] and cleaning_op + dirty_op == 0 and menuButton_rect.collidepoint(pos):
                     menu_visible = not menu_visible
 
-                if saveButton_rect.collidepoint(pos):
+                if hairs == [] and pimples == [] and cleaning_op + dirty_op == 0 and saveButton_rect.collidepoint(pos):
                     save_image(selected, displayAccessories)
 
                 for accessory in accessories:
@@ -160,13 +198,45 @@ def makeOver():
                             displayAccessories.append((pygame.transform.scale(accessory["image"], (600, 600)), (660, 240)))
                         else:
                             displayAccessories.append((pygame.transform.scale(accessory["image"], (600, 600)), (660, 40)))
+
                 for tool in tools:
                     if tool["outil"].get_rect(topleft=(tool["pos"][0], tool["pos"][1])).collidepoint(pos):
                         selectedTool = tool["outil"] if selectedTool != tool["outil"] else ""
+                
+                for pimple in pimples:
+                    if selectedTool == comedon and acne.get_rect(topleft=pimple[0]).collidepoint(pos):
+                        if pimple[1]:
+                            pimples.remove(pimple)
+                        else:
+                            pimple[1] = True
+                
+                for hair in hairs:
+                    if selectedTool == pinceEpiler and bodyHair.get_rect(topleft=hair[0]).collidepoint(pos):
+                        hairs.remove(hair)
+
+            if event.type == pygame.MOUSEMOTION:
+                if selectedTool == savon and time >= 25:
+                    if dirty_op != 0:
+                        dirty_op -= 1
+                    if cleaning_op != 255:
+                        cleaning_op += 1
+                    dirt.set_alpha(dirty_op)
+                    cleaningEffect.set_alpha(cleaning_op)
+                    time = 0
+                if selectedTool == shower and time >= 25:
+                    if cleaning_op != 0:
+                        cleaning_op -= 1
+                    cleaningEffect.set_alpha(cleaning_op)
+                    time = 0
+                    
+
             buttons = pygame.mouse.get_pressed()
             x, y = pygame.mouse.get_pos()
             xpE = x
             ypE = y
+
+        if not running:
+            break
 
         if menu_visible and menu_x > 1600:
             menu_x -= menu_speed
@@ -186,6 +256,15 @@ def makeOver():
         screen.blit(closeButton, closeButton_rect.topleft)
         screen.blit(selected, (660, 240))
         screen.blit(saveButton, saveButton_rect.topleft)
+        screen.blit(dirt, (660, 240))
+        screen.blit(cleaningEffect, (660, 240))
+        for pimple in pimples:
+            if not pimple[1]:
+                screen.blit(acne, pimple[0])
+            else:
+                screen.blit(acneperced, pimple[0])
+        for hair in hairs:
+            screen.blit(pygame.transform.rotate(bodyHair, hair[1]), hair[0])
         if selectedTool != "":
             screen.blit(selectedTool, (xpE, ypE))
         for (accesorry, pos) in displayAccessories:
