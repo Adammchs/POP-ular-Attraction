@@ -33,6 +33,10 @@ image jean normal:
     "images/jean normal.png"
     zoom 2
 
+image titus normal:
+    "images/titus normal.png"
+    zoom 1.5
+
 image me uggly:
     "images/me uggly.png"
     zoom 1
@@ -59,7 +63,9 @@ default colorBubble = ""
 
 label start:
 
+
     show bg playgrounds with dissolve
+    show titus normal at top
 
     $ player_name = renpy.input("Enter your name:")
     $ player_name = player_name.strip()

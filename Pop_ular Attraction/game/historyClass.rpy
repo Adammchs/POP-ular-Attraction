@@ -12,7 +12,7 @@ label historyClass:
     "[player_name], désormais plus confiante après sa transformation, s'assit quelques rangs devant lui, curieuse malgré elle."
     "Elle avait entendu parler de Titus et de ses idées excentriques, mais c'était la première fois qu'elle se retrouvait à proximité."
 
-    show titus normal
+    show titus normal at top
     t "{size=+10}Vous savez qu'on vit sur un disque flottant, hein? Mais ce n'est pas tout! Ce disque est creux... et à l'intérieur, il y a un autre monde!{/size}"
     hide titus
 
@@ -22,7 +22,7 @@ label historyClass:
     ca "Alors quoi, Titus? On va rencontrer des dinosaures dans ta Terre creuse? Et on va tomber dans l'espace si on va trop loin?"
     hide carmen
 
-    show titus normal
+    show titus normal at top
     t "Exactement! Les dinosaures n'ont jamais disparu, ils ont juste migré vers l'intérieur! Et si vous allez trop loin sur la surface, vous pourriez bien tomber... mais c'est un mythe qu'il n'y a \"rien\" en dessous!"
     hide titus
 
@@ -33,7 +33,7 @@ label historyClass:
 
     "[player_name] ouvrit son cahier, mais elle sentait le regard de Titus sur elle. Après quelques minutes, il se pencha légèrement en avant et murmura juste assez fort pour qu'elle l'entende."
 
-    show titus normal
+    show titus normal at top
     t "T'es pas comme les autres, toi. Je vois que tu écoutes. Toi aussi, tu te demandes ce qui se passe vraiment?"
     hide titus
 
@@ -45,7 +45,7 @@ label historyClass:
 
     "Titus sembla ravi par cette réponse. Il s'assit un peu plus droit et se pencha vers elle."
 
-    show titus normal
+    show titus normal at top
     t "Exactement! Il faut écouter. C'est comme ça qu'on découvre la vérité. Les autres, là, ils rient parce qu'ils ont peur. Mais toi, je vois bien que t'as un esprit ouvert."
     hide titus
 
@@ -57,7 +57,7 @@ label historyClass:
 
     "Titus frappa son cahier avec excitation, ses yeux brillants de passion."
 
-    show titus normal
+    show titus normal at top
     t "C'est simple! Imagine un disque, mais épais, tu vois? Comme une crêpe avec plusieurs couches!"
     t "Nous, on est à la surface. En dessous, il y a une autre couche où vivent des civilisations avancées, bien plus anciennes que la nôtre."
     t "Et au centre du disque… un immense noyau de lumière qui alimente tout!"
@@ -69,7 +69,7 @@ label historyClass:
     me "Et les explorateurs? Ceux qui ont fait le tour du monde?"
     hide me
 
-    show titus normal
+    show titus normal at top
     t "Des marionnettes! Des histoires montées de toutes pièces! Tu crois vraiment qu'ils ont \"fait le tour\"? Non! Ils ont juste tourné en rond sur le disque. C'est évident!"
     hide titus
 
@@ -77,7 +77,7 @@ label historyClass:
     "Titus, sur le point de partir, se retourne vers la bulle, son carnet contre sa poitrine comme un trésor."
     "Il semble hésiter un instant, mais finit par se pencher légèrement vers elle, baissant la voix comme s'il allait révéler un secret."
 
-    show titus normal
+    show titus normal at top
     t "Tu sais, je n'invite pas tout le monde à mes réunions."
     t "Si je t'ai proposé de venir, c'est parce que je sens que tu es différente... et que tu pourrais comprendre ce que les autres refusent de voir. Alors? Tu vas venir?"
     hide titus
@@ -85,7 +85,7 @@ label historyClass:
     menu:
         "Ça a l'air intéressant... Je pense que je viendrai. Après tout, c'est bien d'écouter et d'apprendre de nouvelles perspectives.":
             "Titus la fixe avec des yeux brillants d'excitation. Il est visiblement ravi de sa réponse."
-            show titus normal
+            show titus normal at top
             t "Ah! Je savais que j'avais raison! Tu ne regretteras pas, je te le promets. Tu verras, ça va tout changer pour toi."
             hide titus
             "Titus semble plus détendu, et une connexion sincère commence à se former entre eux."
@@ -93,7 +93,7 @@ label historyClass:
 
         "Je ne sais pas encore... Mais pourquoi pas? Si j'ai le temps, je viendrai jeter un œil.":
             "Titus plisse légèrement les yeux, analysant sa réponse, mais il semble tout de même satisfait."
-            show titus normal
+            show titus normal at top
             t "Hmm, je prends ça pour un peut-être. Ce n'est qu'un début... Je te garantis que tu ne regretteras pas."
             hide titus
             "Il semble modérément content, mais reste sur ses gardes quant à ses intentions."
@@ -101,7 +101,7 @@ label historyClass:
 
         "Sérieusement? Désolée, Titus, mais je pense que je vais passer mon tour. Ces trucs-là, c'est pas trop mon truc.":
             "Titus se fige un instant, ses traits se durcissant légèrement. Il range son carnet dans son sac avec des gestes plus brusques."
-            show titus normal
+            show titus normal at top
             t "Hmpf. Évidemment. Tu fais comme les autres. Peut-être que je me suis trompé sur toi, finalement."
             hide titus
             "Il s'éloigne sans un mot de plus, son enthousiasme visiblement refroidi."
@@ -111,7 +111,7 @@ label endHistoryClass:
 
     "Titus s'éloigne, mais avec un sourire satisfait. Avant de passer la porte, il se retourne une dernière fois."
 
-    show titus normal
+    show titus normal at top
     t "On se revoit bientôt, Bulle. Oh, et prépare-toi à voir des choses que tu n'aurais jamais imaginées."
     hide titus
 

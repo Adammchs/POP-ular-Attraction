@@ -53,7 +53,7 @@ label choice_titus:
 
 label choice_personne:
     t "Bon... Personne ne m'as inviter, c'est pas grave, je vais me preparer et leur faire regreter !"
-    jump choice1_done
+    jump badEndScene
 
 # Label final après un choix
 label choice1_done:
