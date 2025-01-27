@@ -395,4 +395,4 @@ def makeOver():
     return selectedAccessories, displayAccessories, selected
 
 if __name__ == "__main__":
-    makeOver()  # Ou `ball([], [], None)`
+    makeOver()
