@@ -394,5 +394,5 @@ def makeOver():
     pygame.quit()
     return selectedAccessories, displayAccessories, selected
 
-if len(sys.argv) == 0:
-    makeOver()
+if __name__ == "__main__":
+    makeOver()  # Ou `ball([], [], None)`
