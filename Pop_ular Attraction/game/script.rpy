@@ -134,14 +134,14 @@ label afterLunch:
     "Après le déjeuner, [player_name] se retrouva seule dans la cour de récréation."
     "Elle s'assit sur un banc, les contours frémissants, le cœur battant."
     "Elle se rendit compte qu'elle avait cours de sport l'après-midi."
-    show me uggly at top
+    show me normal at top
     me "{i}Si je vais en cours, je vais devoir affronter les bulles.{/i}"
     me "{i}Mais surtout... je vais devoir affronter Khyle.{/i}"
     hide me
 
     menu:
         "Je vais en cours!":
-            show me uggly at top
+            show me normal at top
             me "{i}Je ne peux pas me défiler.{/i}"
             me "{i}Je vais y aller, et je vais montrer à tout le monde que je suis forte.{/i}"
             hide me
@@ -149,7 +149,7 @@ label afterLunch:
             jump soccerField
 
         "Je vais sécher.":
-            show me uggly at top
+            show me normal at top
             me "{i}Je ne peux pas...{i}"
             me "{i}Je ne peux pas affronter ça.{/i}"
             hide me

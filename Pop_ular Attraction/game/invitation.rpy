@@ -36,31 +36,31 @@ label choice_jean:
     show jean normal
     j "Merci de m'avoir choisi <3"
     hide jean
-    jump choice1_done
+    jump jeanEnd
 
 label choice_khyle:
     show khyle normal
     k "Merci de m'avoir choisi <3"
     hide khyle
-    jump choice1_done
+    jump khyleEnd
 
 label choice_clement:
     show clement normal
     cl "Merci de m'avoir choisi <3"
     hide clement
-    jump choice1_done
+    jump clementEnd
 
 label choice_sasuke:
     show sasuke normal
     s "Merci de m'avoir choisi <3"
     hide sasuke
-    jump choice1_done
+    jump sasukeEnd
 
 label choice_titus:
     show titus normal
     t "Merci de m'avoir choisi <3"
     hide titus
-    jump choice1_done
+    jump titusEnd
 
 label choice_personne:
     show me normal
